@@ -1,0 +1,6 @@
+framework module Pods_XeroProgrammingExerciseTests {
+  umbrella header "Pods-XeroProgrammingExerciseTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

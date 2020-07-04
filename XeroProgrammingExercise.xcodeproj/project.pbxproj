@@ -1,0 +1,865 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0258305724AEB3C900FA8AF3 /* InvoiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0258305624AEB3C900FA8AF3 /* InvoiceTests.swift */; };
+		0258305E24AF105300FA8AF3 /* InvoicesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0258305D24AF105300FA8AF3 /* InvoicesPresenter.swift */; };
+		0258306124AF113400FA8AF3 /* InvoiceRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0258306024AF113400FA8AF3 /* InvoiceRepositoryProtocol.swift */; };
+		0258306A24AF17C800FA8AF3 /* DecimalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0258306924AF17C800FA8AF3 /* DecimalExtensions.swift */; };
+		0258306C24AF180A00FA8AF3 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0258306B24AF180A00FA8AF3 /* DateExtensions.swift */; };
+		0258306E24AF195D00FA8AF3 /* SwinjectStoryboardExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0258306D24AF195D00FA8AF3 /* SwinjectStoryboardExtensions.swift */; };
+		0258307124AF209300FA8AF3 /* UITableViewCellExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0258307024AF209300FA8AF3 /* UITableViewCellExtensions.swift */; };
+		0258307324AF210500FA8AF3 /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0258307224AF210500FA8AF3 /* UITableViewExtensions.swift */; };
+		0258307524AF219800FA8AF3 /* InvoiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0258307424AF219800FA8AF3 /* InvoiceTableViewCell.swift */; };
+		0258307724AF25AA00FA8AF3 /* InvoiceLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0258307624AF25AA00FA8AF3 /* InvoiceLineView.swift */; };
+		02CFBA2D24B033BE00CFAD73 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 02CFBA2C24B033BE00CFAD73 /* Localizable.strings */; };
+		02CFBA2F24B0344200CFAD73 /* LocalizableStringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CFBA2E24B0344200CFAD73 /* LocalizableStringConstants.swift */; };
+		02CFBA3124B0398100CFAD73 /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CFBA3024B0398100CFAD73 /* Configurable.swift */; };
+		13A61E8A2460C89500445A02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A61E892460C89500445A02 /* AppDelegate.swift */; };
+		13A61E8E2460C89500445A02 /* InvoicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A61E8D2460C89500445A02 /* InvoicesViewController.swift */; };
+		13A61E912460C89500445A02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13A61E8F2460C89500445A02 /* Main.storyboard */; };
+		13A61E932460C89A00445A02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13A61E922460C89A00445A02 /* Assets.xcassets */; };
+		13A61E962460C89A00445A02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13A61E942460C89A00445A02 /* LaunchScreen.storyboard */; };
+		13A61EAC2460C89A00445A02 /* XeroProgrammingExerciseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A61EAB2460C89A00445A02 /* XeroProgrammingExerciseUITests.swift */; };
+		13A61EBB2460CA4F00445A02 /* Invoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A61EBA2460CA4F00445A02 /* Invoice.swift */; };
+		13A61EBD2460CA5C00445A02 /* InvoiceLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A61EBC2460CA5C00445A02 /* InvoiceLine.swift */; };
+		6CE3A299B073017BAABF9737 /* Pods_XeroProgrammingExerciseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36E9878D4259C6158441BFCB /* Pods_XeroProgrammingExerciseTests.framework */; };
+		76F895234F4C979E3F1803F5 /* Pods_XeroProgrammingExercise_XeroProgrammingExerciseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56D4B0E2684DAD9859BA7341 /* Pods_XeroProgrammingExercise_XeroProgrammingExerciseUITests.framework */; };
+		9F412E3D5FA8F49D5EE47F6D /* Pods_XeroProgrammingExercise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3208642C2A6C50563C4240B /* Pods_XeroProgrammingExercise.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		13A61E9D2460C89A00445A02 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 13A61E7E2460C89500445A02 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 13A61E852460C89500445A02;
+			remoteInfo = XeroProgrammingExercise;
+		};
+		13A61EA82460C89A00445A02 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 13A61E7E2460C89500445A02 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 13A61E852460C89500445A02;
+			remoteInfo = XeroProgrammingExercise;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0258305624AEB3C900FA8AF3 /* InvoiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceTests.swift; sourceTree = "<group>"; };
+		0258305D24AF105300FA8AF3 /* InvoicesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoicesPresenter.swift; sourceTree = "<group>"; };
+		0258306024AF113400FA8AF3 /* InvoiceRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceRepositoryProtocol.swift; sourceTree = "<group>"; };
+		0258306924AF17C800FA8AF3 /* DecimalExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalExtensions.swift; sourceTree = "<group>"; };
+		0258306B24AF180A00FA8AF3 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
+		0258306D24AF195D00FA8AF3 /* SwinjectStoryboardExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinjectStoryboardExtensions.swift; sourceTree = "<group>"; };
+		0258307024AF209300FA8AF3 /* UITableViewCellExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtensions.swift; sourceTree = "<group>"; };
+		0258307224AF210500FA8AF3 /* UITableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
+		0258307424AF219800FA8AF3 /* InvoiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceTableViewCell.swift; sourceTree = "<group>"; };
+		0258307624AF25AA00FA8AF3 /* InvoiceLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceLineView.swift; sourceTree = "<group>"; };
+		02CFBA2C24B033BE00CFAD73 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		02CFBA2E24B0344200CFAD73 /* LocalizableStringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableStringConstants.swift; sourceTree = "<group>"; };
+		02CFBA3024B0398100CFAD73 /* Configurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
+		04326EBE634369A16F0E9592 /* Pods-XeroProgrammingExerciseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XeroProgrammingExerciseTests.debug.xcconfig"; path = "Target Support Files/Pods-XeroProgrammingExerciseTests/Pods-XeroProgrammingExerciseTests.debug.xcconfig"; sourceTree = "<group>"; };
+		13A61E862460C89500445A02 /* XeroProgrammingExercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XeroProgrammingExercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13A61E892460C89500445A02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		13A61E8D2460C89500445A02 /* InvoicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoicesViewController.swift; sourceTree = "<group>"; };
+		13A61E902460C89500445A02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		13A61E922460C89A00445A02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		13A61E952460C89A00445A02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		13A61E972460C89A00445A02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13A61E9C2460C89A00445A02 /* XeroProgrammingExerciseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XeroProgrammingExerciseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		13A61EA22460C89A00445A02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13A61EA72460C89A00445A02 /* XeroProgrammingExerciseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XeroProgrammingExerciseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		13A61EAB2460C89A00445A02 /* XeroProgrammingExerciseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XeroProgrammingExerciseUITests.swift; sourceTree = "<group>"; };
+		13A61EAD2460C89A00445A02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13A61EBA2460CA4F00445A02 /* Invoice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Invoice.swift; sourceTree = "<group>"; };
+		13A61EBC2460CA5C00445A02 /* InvoiceLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceLine.swift; sourceTree = "<group>"; };
+		2F37E2AAD2070941C299F62A /* Pods-XeroProgrammingExercise.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XeroProgrammingExercise.release.xcconfig"; path = "Target Support Files/Pods-XeroProgrammingExercise/Pods-XeroProgrammingExercise.release.xcconfig"; sourceTree = "<group>"; };
+		346443AF4A96FDDE83770BAB /* Pods-XeroProgrammingExerciseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XeroProgrammingExerciseTests.release.xcconfig"; path = "Target Support Files/Pods-XeroProgrammingExerciseTests/Pods-XeroProgrammingExerciseTests.release.xcconfig"; sourceTree = "<group>"; };
+		36E9878D4259C6158441BFCB /* Pods_XeroProgrammingExerciseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XeroProgrammingExerciseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		56D4B0E2684DAD9859BA7341 /* Pods_XeroProgrammingExercise_XeroProgrammingExerciseUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XeroProgrammingExercise_XeroProgrammingExerciseUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7243A3F58E7B94A11A955F57 /* Pods-XeroProgrammingExercise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XeroProgrammingExercise.debug.xcconfig"; path = "Target Support Files/Pods-XeroProgrammingExercise/Pods-XeroProgrammingExercise.debug.xcconfig"; sourceTree = "<group>"; };
+		797C9EE40829F3723C5E7686 /* Pods-XeroProgrammingExercise-XeroProgrammingExerciseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XeroProgrammingExercise-XeroProgrammingExerciseUITests.release.xcconfig"; path = "Target Support Files/Pods-XeroProgrammingExercise-XeroProgrammingExerciseUITests/Pods-XeroProgrammingExercise-XeroProgrammingExerciseUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B3208642C2A6C50563C4240B /* Pods_XeroProgrammingExercise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XeroProgrammingExercise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDBBB99879D7501525F76013 /* Pods-XeroProgrammingExercise-XeroProgrammingExerciseUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XeroProgrammingExercise-XeroProgrammingExerciseUITests.debug.xcconfig"; path = "Target Support Files/Pods-XeroProgrammingExercise-XeroProgrammingExerciseUITests/Pods-XeroProgrammingExercise-XeroProgrammingExerciseUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		13A61E832460C89500445A02 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F412E3D5FA8F49D5EE47F6D /* Pods_XeroProgrammingExercise.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13A61E992460C89A00445A02 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CE3A299B073017BAABF9737 /* Pods_XeroProgrammingExerciseTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13A61EA42460C89A00445A02 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76F895234F4C979E3F1803F5 /* Pods_XeroProgrammingExercise_XeroProgrammingExerciseUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0258305824AF0C6000FA8AF3 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				0258305B24AF0EB300FA8AF3 /* ListInvoices */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		0258305924AF0C6B00FA8AF3 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				0277317324B0323E00D4B769 /* Repository */,
+				0258306824AF178600FA8AF3 /* Utils */,
+				0258305C24AF0EE500FA8AF3 /* Dtos */,
+				13A61E8F2460C89500445A02 /* Main.storyboard */,
+				13A61E892460C89500445A02 /* AppDelegate.swift */,
+				0258306D24AF195D00FA8AF3 /* SwinjectStoryboardExtensions.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		0258305A24AF0CC400FA8AF3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				13A61E922460C89A00445A02 /* Assets.xcassets */,
+				13A61E942460C89A00445A02 /* LaunchScreen.storyboard */,
+				13A61E972460C89A00445A02 /* Info.plist */,
+				02CFBA2C24B033BE00CFAD73 /* Localizable.strings */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0258305B24AF0EB300FA8AF3 /* ListInvoices */ = {
+			isa = PBXGroup;
+			children = (
+				0258306F24AF200D00FA8AF3 /* Views */,
+				13A61E8D2460C89500445A02 /* InvoicesViewController.swift */,
+				0258305D24AF105300FA8AF3 /* InvoicesPresenter.swift */,
+			);
+			path = ListInvoices;
+			sourceTree = "<group>";
+		};
+		0258305C24AF0EE500FA8AF3 /* Dtos */ = {
+			isa = PBXGroup;
+			children = (
+				13A61EBA2460CA4F00445A02 /* Invoice.swift */,
+				13A61EBC2460CA5C00445A02 /* InvoiceLine.swift */,
+			);
+			path = Dtos;
+			sourceTree = "<group>";
+		};
+		0258306824AF178600FA8AF3 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				02CFBA2E24B0344200CFAD73 /* LocalizableStringConstants.swift */,
+				0258306924AF17C800FA8AF3 /* DecimalExtensions.swift */,
+				0258306B24AF180A00FA8AF3 /* DateExtensions.swift */,
+				0258307024AF209300FA8AF3 /* UITableViewCellExtensions.swift */,
+				0258307224AF210500FA8AF3 /* UITableViewExtensions.swift */,
+				02CFBA3024B0398100CFAD73 /* Configurable.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		0258306F24AF200D00FA8AF3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0258307424AF219800FA8AF3 /* InvoiceTableViewCell.swift */,
+				0258307624AF25AA00FA8AF3 /* InvoiceLineView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0277317324B0323E00D4B769 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				0258306024AF113400FA8AF3 /* InvoiceRepositoryProtocol.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		13A61E7D2460C89500445A02 = {
+			isa = PBXGroup;
+			children = (
+				13A61E882460C89500445A02 /* XeroProgrammingExercise */,
+				13A61E9F2460C89A00445A02 /* XeroProgrammingExerciseTests */,
+				13A61EAA2460C89A00445A02 /* XeroProgrammingExerciseUITests */,
+				13A61E872460C89500445A02 /* Products */,
+				92CD433057F0749488AC89B9 /* Pods */,
+				E38D95E66837E5294E96B5BB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		13A61E872460C89500445A02 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				13A61E862460C89500445A02 /* XeroProgrammingExercise.app */,
+				13A61E9C2460C89A00445A02 /* XeroProgrammingExerciseTests.xctest */,
+				13A61EA72460C89A00445A02 /* XeroProgrammingExerciseUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		13A61E882460C89500445A02 /* XeroProgrammingExercise */ = {
+			isa = PBXGroup;
+			children = (
+				0258305924AF0C6B00FA8AF3 /* Core */,
+				0258305824AF0C6000FA8AF3 /* Features */,
+				0258305A24AF0CC400FA8AF3 /* Supporting Files */,
+			);
+			path = XeroProgrammingExercise;
+			sourceTree = "<group>";
+		};
+		13A61E9F2460C89A00445A02 /* XeroProgrammingExerciseTests */ = {
+			isa = PBXGroup;
+			children = (
+				13A61EA22460C89A00445A02 /* Info.plist */,
+				0258305624AEB3C900FA8AF3 /* InvoiceTests.swift */,
+			);
+			path = XeroProgrammingExerciseTests;
+			sourceTree = "<group>";
+		};
+		13A61EAA2460C89A00445A02 /* XeroProgrammingExerciseUITests */ = {
+			isa = PBXGroup;
+			children = (
+				13A61EAB2460C89A00445A02 /* XeroProgrammingExerciseUITests.swift */,
+				13A61EAD2460C89A00445A02 /* Info.plist */,
+			);
+			path = XeroProgrammingExerciseUITests;
+			sourceTree = "<group>";
+		};
+		92CD433057F0749488AC89B9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7243A3F58E7B94A11A955F57 /* Pods-XeroProgrammingExercise.debug.xcconfig */,
+				2F37E2AAD2070941C299F62A /* Pods-XeroProgrammingExercise.release.xcconfig */,
+				CDBBB99879D7501525F76013 /* Pods-XeroProgrammingExercise-XeroProgrammingExerciseUITests.debug.xcconfig */,
+				797C9EE40829F3723C5E7686 /* Pods-XeroProgrammingExercise-XeroProgrammingExerciseUITests.release.xcconfig */,
+				04326EBE634369A16F0E9592 /* Pods-XeroProgrammingExerciseTests.debug.xcconfig */,
+				346443AF4A96FDDE83770BAB /* Pods-XeroProgrammingExerciseTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E38D95E66837E5294E96B5BB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B3208642C2A6C50563C4240B /* Pods_XeroProgrammingExercise.framework */,
+				56D4B0E2684DAD9859BA7341 /* Pods_XeroProgrammingExercise_XeroProgrammingExerciseUITests.framework */,
+				36E9878D4259C6158441BFCB /* Pods_XeroProgrammingExerciseTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		13A61E852460C89500445A02 /* XeroProgrammingExercise */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13A61EB02460C89A00445A02 /* Build configuration list for PBXNativeTarget "XeroProgrammingExercise" */;
+			buildPhases = (
+				A7EA87E9E152B7B8EAE06E1D /* [CP] Check Pods Manifest.lock */,
+				13A61E822460C89500445A02 /* Sources */,
+				13A61E832460C89500445A02 /* Frameworks */,
+				13A61E842460C89500445A02 /* Resources */,
+				9337C2F57D847F6B6716F0AF /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XeroProgrammingExercise;
+			productName = XeroProgrammingExercise;
+			productReference = 13A61E862460C89500445A02 /* XeroProgrammingExercise.app */;
+			productType = "com.apple.product-type.application";
+		};
+		13A61E9B2460C89A00445A02 /* XeroProgrammingExerciseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13A61EB32460C89A00445A02 /* Build configuration list for PBXNativeTarget "XeroProgrammingExerciseTests" */;
+			buildPhases = (
+				72F28F35625817E266ED66DB /* [CP] Check Pods Manifest.lock */,
+				13A61E982460C89A00445A02 /* Sources */,
+				13A61E992460C89A00445A02 /* Frameworks */,
+				13A61E9A2460C89A00445A02 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				13A61E9E2460C89A00445A02 /* PBXTargetDependency */,
+			);
+			name = XeroProgrammingExerciseTests;
+			productName = XeroProgrammingExerciseTests;
+			productReference = 13A61E9C2460C89A00445A02 /* XeroProgrammingExerciseTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		13A61EA62460C89A00445A02 /* XeroProgrammingExerciseUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13A61EB62460C89A00445A02 /* Build configuration list for PBXNativeTarget "XeroProgrammingExerciseUITests" */;
+			buildPhases = (
+				E35D36C599F4ECFABDCA6F6A /* [CP] Check Pods Manifest.lock */,
+				13A61EA32460C89A00445A02 /* Sources */,
+				13A61EA42460C89A00445A02 /* Frameworks */,
+				13A61EA52460C89A00445A02 /* Resources */,
+				45A7C097D492AC7DD5C976D6 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				13A61EA92460C89A00445A02 /* PBXTargetDependency */,
+			);
+			name = XeroProgrammingExerciseUITests;
+			productName = XeroProgrammingExerciseUITests;
+			productReference = 13A61EA72460C89A00445A02 /* XeroProgrammingExerciseUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		13A61E7E2460C89500445A02 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = "Xero Ltd";
+				TargetAttributes = {
+					13A61E852460C89500445A02 = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+					13A61E9B2460C89A00445A02 = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = 13A61E852460C89500445A02;
+					};
+					13A61EA62460C89A00445A02 = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = 13A61E852460C89500445A02;
+					};
+				};
+			};
+			buildConfigurationList = 13A61E812460C89500445A02 /* Build configuration list for PBXProject "XeroProgrammingExercise" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 13A61E7D2460C89500445A02;
+			productRefGroup = 13A61E872460C89500445A02 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				13A61E852460C89500445A02 /* XeroProgrammingExercise */,
+				13A61E9B2460C89A00445A02 /* XeroProgrammingExerciseTests */,
+				13A61EA62460C89A00445A02 /* XeroProgrammingExerciseUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		13A61E842460C89500445A02 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13A61E962460C89A00445A02 /* LaunchScreen.storyboard in Resources */,
+				02CFBA2D24B033BE00CFAD73 /* Localizable.strings in Resources */,
+				13A61E932460C89A00445A02 /* Assets.xcassets in Resources */,
+				13A61E912460C89500445A02 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13A61E9A2460C89A00445A02 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13A61EA52460C89A00445A02 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		45A7C097D492AC7DD5C976D6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-XeroProgrammingExercise-XeroProgrammingExerciseUITests/Pods-XeroProgrammingExercise-XeroProgrammingExerciseUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-XeroProgrammingExercise-XeroProgrammingExerciseUITests/Pods-XeroProgrammingExercise-XeroProgrammingExerciseUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-XeroProgrammingExercise-XeroProgrammingExerciseUITests/Pods-XeroProgrammingExercise-XeroProgrammingExerciseUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72F28F35625817E266ED66DB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-XeroProgrammingExerciseTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9337C2F57D847F6B6716F0AF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-XeroProgrammingExercise/Pods-XeroProgrammingExercise-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-XeroProgrammingExercise/Pods-XeroProgrammingExercise-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-XeroProgrammingExercise/Pods-XeroProgrammingExercise-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A7EA87E9E152B7B8EAE06E1D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-XeroProgrammingExercise-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E35D36C599F4ECFABDCA6F6A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-XeroProgrammingExercise-XeroProgrammingExerciseUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		13A61E822460C89500445A02 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02CFBA3124B0398100CFAD73 /* Configurable.swift in Sources */,
+				0258307724AF25AA00FA8AF3 /* InvoiceLineView.swift in Sources */,
+				13A61E8E2460C89500445A02 /* InvoicesViewController.swift in Sources */,
+				0258306A24AF17C800FA8AF3 /* DecimalExtensions.swift in Sources */,
+				0258307324AF210500FA8AF3 /* UITableViewExtensions.swift in Sources */,
+				13A61EBD2460CA5C00445A02 /* InvoiceLine.swift in Sources */,
+				13A61EBB2460CA4F00445A02 /* Invoice.swift in Sources */,
+				0258305E24AF105300FA8AF3 /* InvoicesPresenter.swift in Sources */,
+				0258306E24AF195D00FA8AF3 /* SwinjectStoryboardExtensions.swift in Sources */,
+				02CFBA2F24B0344200CFAD73 /* LocalizableStringConstants.swift in Sources */,
+				0258306C24AF180A00FA8AF3 /* DateExtensions.swift in Sources */,
+				0258306124AF113400FA8AF3 /* InvoiceRepositoryProtocol.swift in Sources */,
+				0258307524AF219800FA8AF3 /* InvoiceTableViewCell.swift in Sources */,
+				13A61E8A2460C89500445A02 /* AppDelegate.swift in Sources */,
+				0258307124AF209300FA8AF3 /* UITableViewCellExtensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13A61E982460C89A00445A02 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0258305724AEB3C900FA8AF3 /* InvoiceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13A61EA32460C89A00445A02 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13A61EAC2460C89A00445A02 /* XeroProgrammingExerciseUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		13A61E9E2460C89A00445A02 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 13A61E852460C89500445A02 /* XeroProgrammingExercise */;
+			targetProxy = 13A61E9D2460C89A00445A02 /* PBXContainerItemProxy */;
+		};
+		13A61EA92460C89A00445A02 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 13A61E852460C89500445A02 /* XeroProgrammingExercise */;
+			targetProxy = 13A61EA82460C89A00445A02 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		13A61E8F2460C89500445A02 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				13A61E902460C89500445A02 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		13A61E942460C89A00445A02 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				13A61E952460C89A00445A02 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		13A61EAE2460C89A00445A02 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		13A61EAF2460C89A00445A02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		13A61EB12460C89A00445A02 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7243A3F58E7B94A11A955F57 /* Pods-XeroProgrammingExercise.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YJ5F6A3DPP;
+				INFOPLIST_FILE = "XeroProgrammingExercise/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.xero.programmingExercise;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		13A61EB22460C89A00445A02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F37E2AAD2070941C299F62A /* Pods-XeroProgrammingExercise.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YJ5F6A3DPP;
+				INFOPLIST_FILE = "XeroProgrammingExercise/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.xero.programmingExercise;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		13A61EB42460C89A00445A02 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04326EBE634369A16F0E9592 /* Pods-XeroProgrammingExerciseTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YJ5F6A3DPP;
+				INFOPLIST_FILE = XeroProgrammingExerciseTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.xero.programmingExercise.XeroProgrammingExerciseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XeroProgrammingExercise.app/XeroProgrammingExercise";
+			};
+			name = Debug;
+		};
+		13A61EB52460C89A00445A02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 346443AF4A96FDDE83770BAB /* Pods-XeroProgrammingExerciseTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YJ5F6A3DPP;
+				INFOPLIST_FILE = XeroProgrammingExerciseTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.xero.programmingExercise.XeroProgrammingExerciseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XeroProgrammingExercise.app/XeroProgrammingExercise";
+			};
+			name = Release;
+		};
+		13A61EB72460C89A00445A02 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDBBB99879D7501525F76013 /* Pods-XeroProgrammingExercise-XeroProgrammingExerciseUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YJ5F6A3DPP;
+				INFOPLIST_FILE = XeroProgrammingExerciseUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.xero.programmingExercise.XeroProgrammingExerciseUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = XeroProgrammingExercise;
+			};
+			name = Debug;
+		};
+		13A61EB82460C89A00445A02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 797C9EE40829F3723C5E7686 /* Pods-XeroProgrammingExercise-XeroProgrammingExerciseUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YJ5F6A3DPP;
+				INFOPLIST_FILE = XeroProgrammingExerciseUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.xero.programmingExercise.XeroProgrammingExerciseUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = XeroProgrammingExercise;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		13A61E812460C89500445A02 /* Build configuration list for PBXProject "XeroProgrammingExercise" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13A61EAE2460C89A00445A02 /* Debug */,
+				13A61EAF2460C89A00445A02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		13A61EB02460C89A00445A02 /* Build configuration list for PBXNativeTarget "XeroProgrammingExercise" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13A61EB12460C89A00445A02 /* Debug */,
+				13A61EB22460C89A00445A02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		13A61EB32460C89A00445A02 /* Build configuration list for PBXNativeTarget "XeroProgrammingExerciseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13A61EB42460C89A00445A02 /* Debug */,
+				13A61EB52460C89A00445A02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		13A61EB62460C89A00445A02 /* Build configuration list for PBXNativeTarget "XeroProgrammingExerciseUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13A61EB72460C89A00445A02 /* Debug */,
+				13A61EB82460C89A00445A02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 13A61E7E2460C89500445A02 /* Project object */;
+}

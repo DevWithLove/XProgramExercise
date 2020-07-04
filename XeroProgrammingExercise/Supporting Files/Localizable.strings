@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  XeroProgrammingExercise
+
+  Created by Tony Mu on 4/07/20.
+  Copyright © 2020 Xero Ltd. All rights reserved.
+*/
+
+
+"TITLE_INVOICE" = "Invoices";
+"INVOICE_NUMBER" = "Invoice: %@";
+"INVOICE_DATE" = "on: %@";
+"TOTAL" = "Total";
