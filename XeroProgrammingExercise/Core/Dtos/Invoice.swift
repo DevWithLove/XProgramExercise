@@ -83,3 +83,9 @@ class Invoice: Sequence, NSCopying, CustomStringConvertible {
         return description
     }
 }
+
+extension Invoice: Equatable {
+    static func == (lhs: Invoice, rhs: Invoice) -> Bool {
+       return lhs.number == rhs.number
+    }
+}

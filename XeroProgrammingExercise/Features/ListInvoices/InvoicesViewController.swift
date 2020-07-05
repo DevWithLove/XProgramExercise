@@ -23,6 +23,7 @@
 
 import UIKit
 import SnapKit
+import Swinject
 
 class InvoicesViewController: UIViewController {
     
@@ -30,6 +31,7 @@ class InvoicesViewController: UIViewController {
     private var invoices = [Invoice]()
     
     var presenter: InvoicesPresenterPresenterProtocol?
+    var container: Container!
     
     // MARK: Views
     
@@ -42,6 +44,11 @@ class InvoicesViewController: UIViewController {
         tableView.estimatedRowHeight = UITableView.automaticDimension
         tableView.register(cellClass: InvoiceTableViewCell.self)
         return tableView
+    }()
+    
+    private lazy var rightBarItem: UIBarButtonItem = {
+        let barItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addInvoice))
+        return barItem
     }()
     
     
@@ -59,8 +66,14 @@ class InvoicesViewController: UIViewController {
     }
     
     // MARK: Helpers
+    
+    @objc func addInvoice() {
+        navigateToSaveInvoiceViewController(invoice: nil)
+    }
+    
     private func setupUI() {
         title = LocalizableStringConstants.invoicesViewTitle
+        navigationItem.rightBarButtonItem = rightBarItem
         view.addSubview(tableView)
         buildConstraints()
     }
@@ -70,12 +83,29 @@ class InvoicesViewController: UIViewController {
             make.top.leading.bottom.trailing.equalToSuperview()
         }
     }
+    
+    private func navigateToSaveInvoiceViewController(invoice: Invoice?) {
+        let viewController = container.resolve(SaveInvoiceViewController.self)!
+        viewController.invoiceNumber = invoice?.number
+        viewController.invoiceLines = invoice?.map{$0} ?? []
+        navigationController?.pushViewController(viewController, animated: true)
+    }
 }
 
 extension InvoicesViewController: InvoicesViewProtocol {
     func presentInvoices(_ invoices: [Invoice]) {
         self.invoices = invoices
         tableView.reloadData()
+    }
+    
+    func presentInvoiceDeleted(invoice: Invoice) {
+        let alert = UIAlertController(title: "\(invoice) has been deleted.", message: nil, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        present(alert, animated: true) { [weak self] in
+            guard let self = self else { return }
+            self.presenter?.loadInvoices()
+            self.tableView.reloadData()
+        }
     }
 }
 
@@ -89,6 +119,20 @@ extension InvoicesViewController: UITableViewDelegate, UITableViewDataSource {
         let invoice = invoices[indexPath.row]
         cell.configureWithModel(invoice)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        switch editingStyle {
+        case .delete:
+            let invoice = invoices[indexPath.row]
+            presenter?.deleteInvoice(invoice: invoice)
+        default:
+            return
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        navigateToSaveInvoiceViewController(invoice: invoices[indexPath.row])
     }
 }
 

@@ -19,6 +19,20 @@ extension SwinjectStoryboard {
         }
         defaultContainer.storyboardInitCompleted(InvoicesViewController.self) { r, c in
             c.presenter = r.resolve(InvoicesPresenterPresenterProtocol.self)
+            c.container = defaultContainer
+        }
+        // Save Inovice
+        defaultContainer.register(SaveInvoicePresenterProtocol.self) { r in
+            SaveInvoicePresenter(invoiceRepository: r.resolve(InvoiceRepositoryProtocol.self)!)
+        }
+        defaultContainer.register(SaveInvoiceViewController.self) { r in
+            let vc = SaveInvoiceViewController()
+            vc.presenter = r.resolve(SaveInvoicePresenterProtocol.self)
+            vc.container = defaultContainer
+            return vc
+        }
+        defaultContainer.register(InvoiceLineViewController.self) { r in
+            return InvoiceLineViewController()
         }
     }
 }

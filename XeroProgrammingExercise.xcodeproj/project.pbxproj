@@ -20,6 +20,10 @@
 		02CFBA2D24B033BE00CFAD73 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 02CFBA2C24B033BE00CFAD73 /* Localizable.strings */; };
 		02CFBA2F24B0344200CFAD73 /* LocalizableStringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CFBA2E24B0344200CFAD73 /* LocalizableStringConstants.swift */; };
 		02CFBA3124B0398100CFAD73 /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CFBA3024B0398100CFAD73 /* Configurable.swift */; };
+		02CFBA3324B136F100CFAD73 /* InvoiceMemoryStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CFBA3224B136F100CFAD73 /* InvoiceMemoryStorage.swift */; };
+		02CFBA3724B13E4400CFAD73 /* SaveInvoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CFBA3624B13E4400CFAD73 /* SaveInvoiceViewController.swift */; };
+		02CFBA3924B145AF00CFAD73 /* SaveInvoicePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CFBA3824B145AF00CFAD73 /* SaveInvoicePresenter.swift */; };
+		02CFBA3B24B157E700CFAD73 /* InvoiceLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CFBA3A24B157E700CFAD73 /* InvoiceLineViewController.swift */; };
 		13A61E8A2460C89500445A02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A61E892460C89500445A02 /* AppDelegate.swift */; };
 		13A61E8E2460C89500445A02 /* InvoicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A61E8D2460C89500445A02 /* InvoicesViewController.swift */; };
 		13A61E912460C89500445A02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13A61E8F2460C89500445A02 /* Main.storyboard */; };
@@ -64,6 +68,10 @@
 		02CFBA2C24B033BE00CFAD73 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		02CFBA2E24B0344200CFAD73 /* LocalizableStringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableStringConstants.swift; sourceTree = "<group>"; };
 		02CFBA3024B0398100CFAD73 /* Configurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
+		02CFBA3224B136F100CFAD73 /* InvoiceMemoryStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceMemoryStorage.swift; sourceTree = "<group>"; };
+		02CFBA3624B13E4400CFAD73 /* SaveInvoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveInvoiceViewController.swift; sourceTree = "<group>"; };
+		02CFBA3824B145AF00CFAD73 /* SaveInvoicePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveInvoicePresenter.swift; sourceTree = "<group>"; };
+		02CFBA3A24B157E700CFAD73 /* InvoiceLineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceLineViewController.swift; sourceTree = "<group>"; };
 		04326EBE634369A16F0E9592 /* Pods-XeroProgrammingExerciseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XeroProgrammingExerciseTests.debug.xcconfig"; path = "Target Support Files/Pods-XeroProgrammingExerciseTests/Pods-XeroProgrammingExerciseTests.debug.xcconfig"; sourceTree = "<group>"; };
 		13A61E862460C89500445A02 /* XeroProgrammingExercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XeroProgrammingExercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13A61E892460C89500445A02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +128,7 @@
 		0258305824AF0C6000FA8AF3 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				02CFBA3424B13DF500CFAD73 /* SaveInvoice */,
 				0258305B24AF0EB300FA8AF3 /* ListInvoices */,
 			);
 			path = Features;
@@ -194,8 +203,27 @@
 			isa = PBXGroup;
 			children = (
 				0258306024AF113400FA8AF3 /* InvoiceRepositoryProtocol.swift */,
+				02CFBA3224B136F100CFAD73 /* InvoiceMemoryStorage.swift */,
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		02CFBA3424B13DF500CFAD73 /* SaveInvoice */ = {
+			isa = PBXGroup;
+			children = (
+				02CFBA3524B13DFE00CFAD73 /* Views */,
+				02CFBA3624B13E4400CFAD73 /* SaveInvoiceViewController.swift */,
+				02CFBA3824B145AF00CFAD73 /* SaveInvoicePresenter.swift */,
+				02CFBA3A24B157E700CFAD73 /* InvoiceLineViewController.swift */,
+			);
+			path = SaveInvoice;
+			sourceTree = "<group>";
+		};
+		02CFBA3524B13DFE00CFAD73 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		13A61E7D2460C89500445A02 = {
@@ -511,20 +539,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02CFBA3324B136F100CFAD73 /* InvoiceMemoryStorage.swift in Sources */,
 				02CFBA3124B0398100CFAD73 /* Configurable.swift in Sources */,
 				0258307724AF25AA00FA8AF3 /* InvoiceLineView.swift in Sources */,
 				13A61E8E2460C89500445A02 /* InvoicesViewController.swift in Sources */,
+				02CFBA3B24B157E700CFAD73 /* InvoiceLineViewController.swift in Sources */,
 				0258306A24AF17C800FA8AF3 /* DecimalExtensions.swift in Sources */,
 				0258307324AF210500FA8AF3 /* UITableViewExtensions.swift in Sources */,
 				13A61EBD2460CA5C00445A02 /* InvoiceLine.swift in Sources */,
 				13A61EBB2460CA4F00445A02 /* Invoice.swift in Sources */,
 				0258305E24AF105300FA8AF3 /* InvoicesPresenter.swift in Sources */,
+				02CFBA3924B145AF00CFAD73 /* SaveInvoicePresenter.swift in Sources */,
 				0258306E24AF195D00FA8AF3 /* SwinjectStoryboardExtensions.swift in Sources */,
 				02CFBA2F24B0344200CFAD73 /* LocalizableStringConstants.swift in Sources */,
 				0258306C24AF180A00FA8AF3 /* DateExtensions.swift in Sources */,
 				0258306124AF113400FA8AF3 /* InvoiceRepositoryProtocol.swift in Sources */,
 				0258307524AF219800FA8AF3 /* InvoiceTableViewCell.swift in Sources */,
 				13A61E8A2460C89500445A02 /* AppDelegate.swift in Sources */,
+				02CFBA3724B13E4400CFAD73 /* SaveInvoiceViewController.swift in Sources */,
 				0258307124AF209300FA8AF3 /* UITableViewCellExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
