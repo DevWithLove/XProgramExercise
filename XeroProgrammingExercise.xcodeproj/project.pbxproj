@@ -17,6 +17,7 @@
 		0258307324AF210500FA8AF3 /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0258307224AF210500FA8AF3 /* UITableViewExtensions.swift */; };
 		0258307524AF219800FA8AF3 /* InvoiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0258307424AF219800FA8AF3 /* InvoiceTableViewCell.swift */; };
 		0258307724AF25AA00FA8AF3 /* InvoiceLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0258307624AF25AA00FA8AF3 /* InvoiceLineView.swift */; };
+		02BF8D6824B1952000E08B10 /* InvoiceLineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BF8D6724B1952000E08B10 /* InvoiceLineTableViewCell.swift */; };
 		02CFBA2D24B033BE00CFAD73 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 02CFBA2C24B033BE00CFAD73 /* Localizable.strings */; };
 		02CFBA2F24B0344200CFAD73 /* LocalizableStringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CFBA2E24B0344200CFAD73 /* LocalizableStringConstants.swift */; };
 		02CFBA3124B0398100CFAD73 /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CFBA3024B0398100CFAD73 /* Configurable.swift */; };
@@ -65,6 +66,7 @@
 		0258307224AF210500FA8AF3 /* UITableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
 		0258307424AF219800FA8AF3 /* InvoiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceTableViewCell.swift; sourceTree = "<group>"; };
 		0258307624AF25AA00FA8AF3 /* InvoiceLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceLineView.swift; sourceTree = "<group>"; };
+		02BF8D6724B1952000E08B10 /* InvoiceLineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceLineTableViewCell.swift; sourceTree = "<group>"; };
 		02CFBA2C24B033BE00CFAD73 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		02CFBA2E24B0344200CFAD73 /* LocalizableStringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableStringConstants.swift; sourceTree = "<group>"; };
 		02CFBA3024B0398100CFAD73 /* Configurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 		02CFBA3524B13DFE00CFAD73 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				02BF8D6724B1952000E08B10 /* InvoiceLineTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -548,6 +551,7 @@
 				0258307324AF210500FA8AF3 /* UITableViewExtensions.swift in Sources */,
 				13A61EBD2460CA5C00445A02 /* InvoiceLine.swift in Sources */,
 				13A61EBB2460CA4F00445A02 /* Invoice.swift in Sources */,
+				02BF8D6824B1952000E08B10 /* InvoiceLineTableViewCell.swift in Sources */,
 				0258305E24AF105300FA8AF3 /* InvoicesPresenter.swift in Sources */,
 				02CFBA3924B145AF00CFAD73 /* SaveInvoicePresenter.swift in Sources */,
 				0258306E24AF195D00FA8AF3 /* SwinjectStoryboardExtensions.swift in Sources */,

@@ -37,7 +37,7 @@ class SaveInvoiceViewController: UIViewController {
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = UITableView.automaticDimension
         tableView.separatorStyle = .none
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "simplecell")
+        tableView.register(cellClass: InvoiceLineTableViewCell.self)
         return tableView
     }()
 
@@ -109,8 +109,8 @@ extension SaveInvoiceViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "simplecell", for: indexPath) 
-        cell.textLabel?.text = invoiceLines[indexPath.row].description
+        let cell = tableView.dequeueReusableCell(withIdentifier: InvoiceLineTableViewCell.cellId, for: indexPath) as! InvoiceLineTableViewCell
+        cell.configureWithModel(invoiceLines[indexPath.row])
         return cell
     }
     
@@ -144,5 +144,12 @@ extension SaveInvoiceViewController: InviceLineViewDelegate {
             invoiceLines.append(line)
         }
         tableView.reloadData()
+    }
+}
+
+extension InvoiceLineTableViewCell: Configurable {
+    func configureWithModel(_ line: InvoiceLine) {
+        lineView.titleLabel.text = line.description
+        lineView.detailLabel.text = "\(line.quantity) * \(line.cost)"
     }
 }
