@@ -12,7 +12,8 @@ import SwinjectStoryboard
 extension SwinjectStoryboard {
     @objc class func setup() {
         defaultContainer.register(InvoiceRepositoryProtocol.self) { _ in
-            InvoiceRepository()
+            RealmStorage()
+           // InvoiceRepository()
         }
         defaultContainer.register(InvoicesPresenterPresenterProtocol.self) { r in
             InvoicesPresenter(invoiceRepository: r.resolve(InvoiceRepositoryProtocol.self)!)

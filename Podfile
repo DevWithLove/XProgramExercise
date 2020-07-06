@@ -9,6 +9,7 @@ target 'XeroProgrammingExercise' do
   pod 'Swinject','2.6.0'
   pod 'SwinjectStoryboard'
   pod 'SnapKit'
+  pod 'RealmSwift'
 
   target 'XeroProgrammingExerciseTests' do
     inherit! :search_paths

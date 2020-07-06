@@ -17,4 +17,9 @@ extension Decimal {
         return formatter.string(from: self as NSNumber) ?? ""
     }
     
+    /// convert to Double
+    var doubleValue: Double {
+        return NSDecimalNumber(decimal:self).doubleValue
+    }
+    
 }

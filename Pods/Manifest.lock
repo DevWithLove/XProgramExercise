@@ -1,25 +1,35 @@
 PODS:
+  - Realm (5.2.0):
+    - Realm/Headers (= 5.2.0)
+  - Realm/Headers (5.2.0)
+  - RealmSwift (5.2.0):
+    - Realm (= 5.2.0)
   - SnapKit (5.0.1)
   - Swinject (2.6.0)
   - SwinjectStoryboard (2.2.0):
     - Swinject (~> 2.6)
 
 DEPENDENCIES:
+  - RealmSwift
   - SnapKit
   - Swinject (= 2.6.0)
   - SwinjectStoryboard
 
 SPEC REPOS:
   trunk:
+    - Realm
+    - RealmSwift
     - SnapKit
     - Swinject
     - SwinjectStoryboard
 
 SPEC CHECKSUMS:
+  Realm: f749c723e272f08fdf1939af5e61d2bd09b203e8
+  RealmSwift: bf0ab78b52c5bafba8b3ad73be8dfb4c1ea5cf01
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   Swinject: 48a96cda93633cf2860697b4ce76ab5db9ebaca2
   SwinjectStoryboard: 32512ef16c2b0ff5b8f823b23539c4a50f6d3383
 
-PODFILE CHECKSUM: 1a0d9c85bf7bf28bc01533e48de90b1b41d8270c
+PODFILE CHECKSUM: ff3cc5d4020554f3cf7516bcfe6616c57deaa55a
 
 COCOAPODS: 1.9.1
