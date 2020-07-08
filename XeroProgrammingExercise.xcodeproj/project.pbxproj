@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		025413AE24B3F292009206CB /* GroupedSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025413AD24B3F292009206CB /* GroupedSection.swift */; };
 		0258305724AEB3C900FA8AF3 /* InvoiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0258305624AEB3C900FA8AF3 /* InvoiceTests.swift */; };
 		0258305E24AF105300FA8AF3 /* InvoicesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0258305D24AF105300FA8AF3 /* InvoicesPresenter.swift */; };
 		0258306124AF113400FA8AF3 /* InvoiceRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0258306024AF113400FA8AF3 /* InvoiceRepositoryProtocol.swift */; };
@@ -57,6 +58,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		025413AD24B3F292009206CB /* GroupedSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupedSection.swift; sourceTree = "<group>"; };
 		0258305624AEB3C900FA8AF3 /* InvoiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceTests.swift; sourceTree = "<group>"; };
 		0258305D24AF105300FA8AF3 /* InvoicesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoicesPresenter.swift; sourceTree = "<group>"; };
 		0258306024AF113400FA8AF3 /* InvoiceRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceRepositoryProtocol.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 				0258307024AF209300FA8AF3 /* UITableViewCellExtensions.swift */,
 				0258307224AF210500FA8AF3 /* UITableViewExtensions.swift */,
 				02CFBA3024B0398100CFAD73 /* Configurable.swift */,
+				025413AD24B3F292009206CB /* GroupedSection.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -561,6 +564,7 @@
 				0258306E24AF195D00FA8AF3 /* SwinjectStoryboardExtensions.swift in Sources */,
 				02CFBA2F24B0344200CFAD73 /* LocalizableStringConstants.swift in Sources */,
 				0258306C24AF180A00FA8AF3 /* DateExtensions.swift in Sources */,
+				025413AE24B3F292009206CB /* GroupedSection.swift in Sources */,
 				0258306124AF113400FA8AF3 /* InvoiceRepositoryProtocol.swift in Sources */,
 				0258307524AF219800FA8AF3 /* InvoiceTableViewCell.swift in Sources */,
 				13A61E8A2460C89500445A02 /* AppDelegate.swift in Sources */,

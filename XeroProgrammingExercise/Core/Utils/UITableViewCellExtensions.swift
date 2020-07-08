@@ -14,3 +14,10 @@ extension UITableViewCell {
         return String(describing: self).lowercased()
     }
 }
+
+extension UITableViewHeaderFooterView {
+    /// Return a default view Id as view calss name
+    public static var cellId: String {
+        return String(describing: self).lowercased()
+    }
+}

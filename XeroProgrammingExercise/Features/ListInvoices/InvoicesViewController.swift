@@ -28,7 +28,7 @@ import Swinject
 class InvoicesViewController: UIViewController {
     
     // MARK: Variables
-    private var invoices = [Invoice]()
+    private var sections = [GroupedSection<Date, Invoice>]()
     
     var presenter: InvoicesPresenterPresenterProtocol?
     var container: Container!
@@ -43,6 +43,7 @@ class InvoicesViewController: UIViewController {
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = UITableView.automaticDimension
         tableView.register(cellClass: InvoiceTableViewCell.self)
+        tableView.register(viewClass: UITableViewHeaderFooterView.self)
         return tableView
     }()
     
@@ -90,12 +91,22 @@ class InvoicesViewController: UIViewController {
         viewController.invoiceLines = invoice?.map{$0} ?? []
         navigationController?.pushViewController(viewController, animated: true)
     }
+    
+    private func reloadData(invoices: [Invoice]) {
+        sections = GroupedSection<Date, Invoice>.group(items: invoices, by: { (invoice) -> Date in
+            let calendar = Calendar.current
+            let components = calendar.dateComponents([.year, .month, .day], from: invoice.date)
+            return calendar.date(from: components)!
+        }).sorted(by: { (sectionOne, sectionTwo) -> Bool in
+            sectionOne.sectionItem < sectionTwo.sectionItem
+        })
+        tableView.reloadData()
+    }
 }
 
 extension InvoicesViewController: InvoicesViewProtocol {
     func presentInvoices(_ invoices: [Invoice]) {
-        self.invoices = invoices
-        tableView.reloadData()
+        reloadData(invoices: invoices)
     }
     
     func presentInvoiceDeleted(invoice: Invoice) {
@@ -110,13 +121,18 @@ extension InvoicesViewController: InvoicesViewProtocol {
 }
 
 extension InvoicesViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        sections.count
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return invoices.count
+        return  sections[section].rows.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: InvoiceTableViewCell.cellId, for: indexPath) as! InvoiceTableViewCell
-        let invoice = invoices[indexPath.row]
+        let invoice = getInvoice(by: indexPath)
         cell.configureWithModel(invoice)
         return cell
     }
@@ -124,7 +140,7 @@ extension InvoicesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         switch editingStyle {
         case .delete:
-            let invoice = invoices[indexPath.row]
+            let invoice = getInvoice(by: indexPath)
             presenter?.deleteInvoice(invoice: invoice)
         default:
             return
@@ -132,7 +148,17 @@ extension InvoicesViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        navigateToSaveInvoiceViewController(invoice: invoices[indexPath.row])
+        navigateToSaveInvoiceViewController(invoice: getInvoice(by: indexPath))
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: UITableViewHeaderFooterView.cellId)!
+        view.textLabel?.text = sections[section].sectionItem.toString(dateFormat: "dd/MM/YYYY")
+        return view
+    }
+    
+    private func getInvoice(by indexPath: IndexPath) -> Invoice {
+        return sections[indexPath.section].rows[indexPath.row]
     }
 }
 

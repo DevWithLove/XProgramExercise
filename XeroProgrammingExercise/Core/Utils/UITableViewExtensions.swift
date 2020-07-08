@@ -13,4 +13,9 @@ extension UITableView {
     public func register<T: UITableViewCell>(cellClass: T.Type) {
         register(cellClass, forCellReuseIdentifier: cellClass.cellId)
     }
+    
+    /// Register cell with the default header footer id
+    public func register<T: UITableViewHeaderFooterView>(viewClass: T.Type) {
+        register(viewClass, forHeaderFooterViewReuseIdentifier: viewClass.cellId)
+    }
 }
