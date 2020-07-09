@@ -19,6 +19,7 @@
 		0258307524AF219800FA8AF3 /* InvoiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0258307424AF219800FA8AF3 /* InvoiceTableViewCell.swift */; };
 		0258307724AF25AA00FA8AF3 /* InvoiceLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0258307624AF25AA00FA8AF3 /* InvoiceLineView.swift */; };
 		025B425424B6DFDA00A77F7D /* DateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025B425324B6DFDA00A77F7D /* DateTests.swift */; };
+		025B425724B7032C00A77F7D /* InvoiceServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025B425624B7032C00A77F7D /* InvoiceServiceProtocol.swift */; };
 		028B220524B2E21C006A0A83 /* RealmStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028B220424B2E21C006A0A83 /* RealmStorage.swift */; };
 		02BF8D6824B1952000E08B10 /* InvoiceLineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BF8D6724B1952000E08B10 /* InvoiceLineTableViewCell.swift */; };
 		02CFBA2D24B033BE00CFAD73 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 02CFBA2C24B033BE00CFAD73 /* Localizable.strings */; };
@@ -71,6 +72,7 @@
 		0258307424AF219800FA8AF3 /* InvoiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceTableViewCell.swift; sourceTree = "<group>"; };
 		0258307624AF25AA00FA8AF3 /* InvoiceLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceLineView.swift; sourceTree = "<group>"; };
 		025B425324B6DFDA00A77F7D /* DateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTests.swift; sourceTree = "<group>"; };
+		025B425624B7032C00A77F7D /* InvoiceServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceServiceProtocol.swift; sourceTree = "<group>"; };
 		028B220424B2E21C006A0A83 /* RealmStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmStorage.swift; sourceTree = "<group>"; };
 		02BF8D6724B1952000E08B10 /* InvoiceLineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceLineTableViewCell.swift; sourceTree = "<group>"; };
 		02CFBA2C24B033BE00CFAD73 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 		0258305924AF0C6B00FA8AF3 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				025B425524B7030300A77F7D /* Services */,
 				0277317324B0323E00D4B769 /* Repository */,
 				0258306824AF178600FA8AF3 /* Utils */,
 				0258305C24AF0EE500FA8AF3 /* Dtos */,
@@ -206,6 +209,14 @@
 				0258307624AF25AA00FA8AF3 /* InvoiceLineView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		025B425524B7030300A77F7D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				025B425624B7032C00A77F7D /* InvoiceServiceProtocol.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		0277317324B0323E00D4B769 /* Repository */ = {
@@ -564,6 +575,7 @@
 				02BF8D6824B1952000E08B10 /* InvoiceLineTableViewCell.swift in Sources */,
 				0258305E24AF105300FA8AF3 /* InvoicesPresenter.swift in Sources */,
 				02CFBA3924B145AF00CFAD73 /* SaveInvoicePresenter.swift in Sources */,
+				025B425724B7032C00A77F7D /* InvoiceServiceProtocol.swift in Sources */,
 				0258306E24AF195D00FA8AF3 /* SwinjectStoryboardExtensions.swift in Sources */,
 				02CFBA2F24B0344200CFAD73 /* LocalizableStringConstants.swift in Sources */,
 				0258306C24AF180A00FA8AF3 /* DateExtensions.swift in Sources */,

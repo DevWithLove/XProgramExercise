@@ -31,6 +31,15 @@ class InvoicesPresenter: InvoicesPresenterPresenterProtocol {
         guard let view = viewDelegate else { return }
         let invoices = invoiceRepository.get()
         view.presentInvoices(invoices)
+//        let service = InvoiceService()
+//        service.get { [weak self] (result) in
+//            switch result {
+//            case .success(let invoices):
+//                self?.viewDelegate?.presentInvoices(invoices)
+//            case .failure(let error):
+//                print("Error: \(error)")
+//            }
+//        }
     }
     
     func deleteInvoice(invoice: Invoice) {
