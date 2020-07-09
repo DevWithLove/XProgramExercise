@@ -16,4 +16,15 @@ extension Date {
         dateFormatter.dateFormat = format
         return dateFormatter.string(from: self)
     }
+    
+    static func getDate(year:Int, month: Int, day: Int, hour: Int, minute: Int) -> Date? {
+        var dateComponent = DateComponents()
+        dateComponent.year = year
+        dateComponent.month = month
+        dateComponent.day = day
+        dateComponent.timeZone = Calendar.current.timeZone
+        dateComponent.hour = hour
+        dateComponent.minute = minute
+        return Calendar.current.date(from: dateComponent)
+    }
 }
