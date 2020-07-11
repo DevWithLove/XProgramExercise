@@ -39,6 +39,9 @@ class InvoicesViewController: UIViewController {
         let tableView = UITableView()
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.dragDelegate = self
+        tableView.dropDelegate = self
+        tableView.dragInteractionEnabled = true
         tableView.separatorStyle = .none
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = UITableView.automaticDimension
@@ -120,7 +123,39 @@ extension InvoicesViewController: InvoicesViewProtocol {
     }
 }
 
-extension InvoicesViewController: UITableViewDelegate, UITableViewDataSource {
+extension InvoicesViewController: UITableViewDelegate, UITableViewDataSource, UITableViewDragDelegate, UITableViewDropDelegate {
+    
+    func tableView(_ tableView: UITableView, itemsForBeginning session: UIDragSession, at indexPath: IndexPath) -> [UIDragItem] {
+        let invoice = getInvoice(by: indexPath)
+        return []
+    }
+    
+    func tableView(_ tableView: UITableView, performDropWith coordinator: UITableViewDropCoordinator) {
+        
+    }
+    
+    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        
+        let invoiceToMove = getInvoice(by: sourceIndexPath)
+        let invoiceToMerge = getInvoice(by: destinationIndexPath)
+        guard invoiceToMove != invoiceToMerge else { return }
+        
+        let alertView = UIAlertController(title: "Merge", message: "Are you sure you want to merge \(invoiceToMove) to \(invoiceToMerge) ?", preferredStyle: .alert)
+        let yesAction = UIAlertAction(title: "Yes", style: .default) { _ in
+            invoiceToMerge.merge(sourceInvoice: invoiceToMove)
+            self.presenter?.save(invoice: invoiceToMerge)
+            self.presenter?.deleteInvoice(invoice: invoiceToMove)
+        }
+        let cancelAction = UIAlertAction(title: "No", style: .cancel, handler: nil)
+        
+        alertView.addAction(yesAction)
+        alertView.addAction(cancelAction)
+        present(alertView, animated: true, completion: nil)
+    }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         sections.count

@@ -14,11 +14,12 @@ protocol InvoicesViewProtocol: class {
 protocol InvoicesPresenterPresenterProtocol {
     var viewDelegate: InvoicesViewProtocol? { get set }
     func loadInvoices()
+    func save(invoice: Invoice)
     func deleteInvoice(invoice: Invoice)
 }
 
 class InvoicesPresenter: InvoicesPresenterPresenterProtocol {
-    
+  
     private let invoiceRepository: InvoiceRepositoryProtocol
     weak var viewDelegate: InvoicesViewProtocol?
     
@@ -40,6 +41,10 @@ class InvoicesPresenter: InvoicesPresenterPresenterProtocol {
 //                print("Error: \(error)")
 //            }
 //        }
+    }
+    
+    func save(invoice: Invoice) {
+        invoiceRepository.save(invoice: invoice)
     }
     
     func deleteInvoice(invoice: Invoice) {
