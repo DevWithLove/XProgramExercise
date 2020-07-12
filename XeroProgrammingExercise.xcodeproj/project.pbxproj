@@ -21,6 +21,8 @@
 		025B425424B6DFDA00A77F7D /* DateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025B425324B6DFDA00A77F7D /* DateTests.swift */; };
 		025B425724B7032C00A77F7D /* InvoiceServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025B425624B7032C00A77F7D /* InvoiceServiceProtocol.swift */; };
 		028B220524B2E21C006A0A83 /* RealmStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028B220424B2E21C006A0A83 /* RealmStorage.swift */; };
+		02B27BE424BA750800B3799F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B27BE324BA750800B3799F /* LoginViewController.swift */; };
+		02B27BE624BA80FE00B3799F /* Switcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B27BE524BA80FE00B3799F /* Switcher.swift */; };
 		02BF8D6824B1952000E08B10 /* InvoiceLineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BF8D6724B1952000E08B10 /* InvoiceLineTableViewCell.swift */; };
 		02CFBA2D24B033BE00CFAD73 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 02CFBA2C24B033BE00CFAD73 /* Localizable.strings */; };
 		02CFBA2F24B0344200CFAD73 /* LocalizableStringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CFBA2E24B0344200CFAD73 /* LocalizableStringConstants.swift */; };
@@ -74,6 +76,8 @@
 		025B425324B6DFDA00A77F7D /* DateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTests.swift; sourceTree = "<group>"; };
 		025B425624B7032C00A77F7D /* InvoiceServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceServiceProtocol.swift; sourceTree = "<group>"; };
 		028B220424B2E21C006A0A83 /* RealmStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmStorage.swift; sourceTree = "<group>"; };
+		02B27BE324BA750800B3799F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		02B27BE524BA80FE00B3799F /* Switcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Switcher.swift; sourceTree = "<group>"; };
 		02BF8D6724B1952000E08B10 /* InvoiceLineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceLineTableViewCell.swift; sourceTree = "<group>"; };
 		02CFBA2C24B033BE00CFAD73 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		02CFBA2E24B0344200CFAD73 /* LocalizableStringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableStringConstants.swift; sourceTree = "<group>"; };
@@ -138,6 +142,7 @@
 		0258305824AF0C6000FA8AF3 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				02B27BE124BA74DB00B3799F /* Login */,
 				02CFBA3424B13DF500CFAD73 /* SaveInvoice */,
 				0258305B24AF0EB300FA8AF3 /* ListInvoices */,
 			);
@@ -198,6 +203,7 @@
 				0258307224AF210500FA8AF3 /* UITableViewExtensions.swift */,
 				02CFBA3024B0398100CFAD73 /* Configurable.swift */,
 				025413AD24B3F292009206CB /* GroupedSection.swift */,
+				02B27BE524BA80FE00B3799F /* Switcher.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -227,6 +233,14 @@
 				028B220424B2E21C006A0A83 /* RealmStorage.swift */,
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		02B27BE124BA74DB00B3799F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				02B27BE324BA750800B3799F /* LoginViewController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		02CFBA3424B13DF500CFAD73 /* SaveInvoice */ = {
@@ -574,8 +588,10 @@
 				13A61EBB2460CA4F00445A02 /* Invoice.swift in Sources */,
 				02BF8D6824B1952000E08B10 /* InvoiceLineTableViewCell.swift in Sources */,
 				0258305E24AF105300FA8AF3 /* InvoicesPresenter.swift in Sources */,
+				02B27BE424BA750800B3799F /* LoginViewController.swift in Sources */,
 				02CFBA3924B145AF00CFAD73 /* SaveInvoicePresenter.swift in Sources */,
 				025B425724B7032C00A77F7D /* InvoiceServiceProtocol.swift in Sources */,
+				02B27BE624BA80FE00B3799F /* Switcher.swift in Sources */,
 				0258306E24AF195D00FA8AF3 /* SwinjectStoryboardExtensions.swift in Sources */,
 				02CFBA2F24B0344200CFAD73 /* LocalizableStringConstants.swift in Sources */,
 				0258306C24AF180A00FA8AF3 /* DateExtensions.swift in Sources */,

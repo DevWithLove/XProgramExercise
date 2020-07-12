@@ -55,6 +55,11 @@ class InvoicesViewController: UIViewController {
         return barItem
     }()
     
+    private lazy var lgoinOutBarItem: UIBarButtonItem = {
+        let barItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(logout))
+        return barItem
+    }()
+    
     
     // MARK: iOS life cycle
     
@@ -75,9 +80,15 @@ class InvoicesViewController: UIViewController {
         navigateToSaveInvoiceViewController(invoice: nil)
     }
     
+    @objc func logout() {
+        UserDefaults.standard.set(false, forKey: Switcher.loginKey)
+        Switcher.updateRootVC()
+    }
+    
     private func setupUI() {
         title = LocalizableStringConstants.invoicesViewTitle
         navigationItem.rightBarButtonItem = rightBarItem
+        navigationItem.leftBarButtonItem = lgoinOutBarItem
         view.addSubview(tableView)
         buildConstraints()
     }
