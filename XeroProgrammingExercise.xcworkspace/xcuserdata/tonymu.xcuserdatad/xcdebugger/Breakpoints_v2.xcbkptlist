@@ -62,8 +62,8 @@
             filePath = "XeroProgrammingExercise/Features/ListInvoices/InvoicesViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "173"
-            endingLineNumber = "173"
+            startingLineNumber = "179"
+            endingLineNumber = "179"
             landmarkName = "InvoicesViewController"
             landmarkType = "21">
          </BreakpointContent>

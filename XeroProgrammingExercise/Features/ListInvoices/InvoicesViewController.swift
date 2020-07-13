@@ -58,6 +58,11 @@ class InvoicesViewController: UIViewController {
         return view
     }()
     
+    private lazy var tapGesture: UITapGestureRecognizer = {
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
+        return tap
+    }()
+    
     private lazy var rightBarItem: UIBarButtonItem = {
         let barItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addInvoice))
         return barItem
@@ -74,6 +79,7 @@ class InvoicesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        view.addGestureRecognizer(tapGesture)
         presenter?.viewDelegate = self
     }
     
