@@ -50,6 +50,14 @@ class InvoicesViewController: UIViewController {
         return tableView
     }()
     
+    private lazy var searchBar: UISearchBar = {
+        let view = UISearchBar()
+        view.delegate = self
+        view.placeholder = "Enter invoice number"
+        view.showsCancelButton = true
+        return view
+    }()
+    
     private lazy var rightBarItem: UIBarButtonItem = {
         let barItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addInvoice))
         return barItem
@@ -71,7 +79,7 @@ class InvoicesViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        presenter?.loadInvoices()
+        presenter?.loadInvoices(number: nil)
     }
     
     // MARK: Helpers
@@ -89,13 +97,21 @@ class InvoicesViewController: UIViewController {
         title = LocalizableStringConstants.invoicesViewTitle
         navigationItem.rightBarButtonItem = rightBarItem
         navigationItem.leftBarButtonItem = lgoinOutBarItem
+        view.addSubview(searchBar)
         view.addSubview(tableView)
         buildConstraints()
     }
     
     private func buildConstraints() {
+        searchBar.snp.makeConstraints { (make) in
+            make.top.equalTo(view.safeAreaLayoutGuide)
+            make.leading.equalToSuperview().offset(20)
+            make.trailing.equalToSuperview().offset(-20)
+            make.bottom.equalTo(tableView.snp.top)
+        }
         tableView.snp.makeConstraints { (make) in
-            make.top.leading.bottom.trailing.equalToSuperview()
+            make.leading.trailing.equalTo(searchBar)
+            make.bottom.equalToSuperview()
         }
     }
     
@@ -128,9 +144,19 @@ extension InvoicesViewController: InvoicesViewProtocol {
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         present(alert, animated: true) { [weak self] in
             guard let self = self else { return }
-            self.presenter?.loadInvoices()
+            self.presenter?.loadInvoices(number: nil)
             self.tableView.reloadData()
         }
+    }
+}
+
+extension InvoicesViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        presenter?.loadInvoices(number: searchBar.text)
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        presenter?.loadInvoices(number: nil)
     }
 }
 

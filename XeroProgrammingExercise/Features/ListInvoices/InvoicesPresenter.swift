@@ -13,7 +13,7 @@ protocol InvoicesViewProtocol: class {
 
 protocol InvoicesPresenterPresenterProtocol {
     var viewDelegate: InvoicesViewProtocol? { get set }
-    func loadInvoices()
+    func loadInvoices(number: String?)
     func save(invoice: Invoice)
     func deleteInvoice(invoice: Invoice)
 }
@@ -27,20 +27,14 @@ class InvoicesPresenter: InvoicesPresenterPresenterProtocol {
         self.invoiceRepository = invoiceRepository
     }
 
-    func loadInvoices() {
+    func loadInvoices(number: String?) {
         // Business logic here
         guard let view = viewDelegate else { return }
-        let invoices = invoiceRepository.get()
+        var invoices = invoiceRepository.get()
+        if let number = number {
+            invoices = invoices.filter{$0.number.contains(number)}
+        }
         view.presentInvoices(invoices)
-//        let service = InvoiceService()
-//        service.get { [weak self] (result) in
-//            switch result {
-//            case .success(let invoices):
-//                self?.viewDelegate?.presentInvoices(invoices)
-//            case .failure(let error):
-//                print("Error: \(error)")
-//            }
-//        }
     }
     
     func save(invoice: Invoice) {
