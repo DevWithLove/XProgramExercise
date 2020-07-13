@@ -20,6 +20,7 @@
 		0258307724AF25AA00FA8AF3 /* InvoiceLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0258307624AF25AA00FA8AF3 /* InvoiceLineView.swift */; };
 		025B425424B6DFDA00A77F7D /* DateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025B425324B6DFDA00A77F7D /* DateTests.swift */; };
 		025B425724B7032C00A77F7D /* InvoiceServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025B425624B7032C00A77F7D /* InvoiceServiceProtocol.swift */; };
+		025EA00024BC456B00512828 /* InvoicesApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025E9FFF24BC456B00512828 /* InvoicesApi.swift */; };
 		028B220524B2E21C006A0A83 /* RealmStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028B220424B2E21C006A0A83 /* RealmStorage.swift */; };
 		02B27BE424BA750800B3799F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B27BE324BA750800B3799F /* LoginViewController.swift */; };
 		02B27BE624BA80FE00B3799F /* Switcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B27BE524BA80FE00B3799F /* Switcher.swift */; };
@@ -75,6 +76,7 @@
 		0258307624AF25AA00FA8AF3 /* InvoiceLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceLineView.swift; sourceTree = "<group>"; };
 		025B425324B6DFDA00A77F7D /* DateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTests.swift; sourceTree = "<group>"; };
 		025B425624B7032C00A77F7D /* InvoiceServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceServiceProtocol.swift; sourceTree = "<group>"; };
+		025E9FFF24BC456B00512828 /* InvoicesApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoicesApi.swift; sourceTree = "<group>"; };
 		028B220424B2E21C006A0A83 /* RealmStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmStorage.swift; sourceTree = "<group>"; };
 		02B27BE324BA750800B3799F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		02B27BE524BA80FE00B3799F /* Switcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Switcher.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 		0258305924AF0C6B00FA8AF3 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				025E9FFE24BC44C600512828 /* Networking */,
 				025B425524B7030300A77F7D /* Services */,
 				0277317324B0323E00D4B769 /* Repository */,
 				0258306824AF178600FA8AF3 /* Utils */,
@@ -223,6 +226,14 @@
 				025B425624B7032C00A77F7D /* InvoiceServiceProtocol.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		025E9FFE24BC44C600512828 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				025E9FFF24BC456B00512828 /* InvoicesApi.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		0277317324B0323E00D4B769 /* Repository */ = {
@@ -584,6 +595,7 @@
 				02CFBA3B24B157E700CFAD73 /* InvoiceLineViewController.swift in Sources */,
 				0258306A24AF17C800FA8AF3 /* DecimalExtensions.swift in Sources */,
 				0258307324AF210500FA8AF3 /* UITableViewExtensions.swift in Sources */,
+				025EA00024BC456B00512828 /* InvoicesApi.swift in Sources */,
 				13A61EBD2460CA5C00445A02 /* InvoiceLine.swift in Sources */,
 				13A61EBB2460CA4F00445A02 /* Invoice.swift in Sources */,
 				02BF8D6824B1952000E08B10 /* InvoiceLineTableViewCell.swift in Sources */,
